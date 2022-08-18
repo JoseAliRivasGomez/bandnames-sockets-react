@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
+import { getEnvVariables } from "../../helpers/getEnvVariables";
 import { useSocket } from "../hooks/useSocket";
 import { SocketContext } from "./SocketContext"
 
+const {VITE_API_URL} = getEnvVariables();
+
 export const SocketProvider = ({children}) => {
 
-    const {socket, online} = useSocket('http://localhost:4000');
+    const {socket, online} = useSocket(VITE_API_URL);
 
     const [bands, setBands] = useState([]);
 
