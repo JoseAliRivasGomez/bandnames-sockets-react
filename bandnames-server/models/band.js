@@ -5,7 +5,7 @@ class Band {
     constructor(name){
         this.id = uuidv4();
         this.name = name;
-        this.votes = 0;
+        this.votes = Math.floor(Math.random() * 1000) + 1;
     }
 
 }

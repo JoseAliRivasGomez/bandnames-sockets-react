@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { SocketContext } from '../context/SocketContext';
 
-export const BandAdd = ({crearBanda}) => {
+export const BandAdd = () => {
 
+    const {crearBanda} = useContext(SocketContext);
     const [valor, setValor] = useState('');
 
     const onSubmit = (e) => {
