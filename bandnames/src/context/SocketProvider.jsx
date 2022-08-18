@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getEnvVariables } from "../../helpers/getEnvVariables";
+import { getEnvVariables } from "../helpers/getEnvVariables";
 import { useSocket } from "../hooks/useSocket";
 import { SocketContext } from "./SocketContext"
 
